@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="150 80 780 860" width="780" height="860">
+  <!-- Navy Blue Background -->
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#132a5a"/>
+      <stop offset="100%" stop-color="#0D1B3E"/>
+    </radialGradient>
+  </defs>
+  <rect x="150" y="80" width="780" height="860" fill="url(#bgGrad)"/>
+
+  <!-- Orange left arm of V (bold parallelogram) -->
+  <polygon points="235,240 380,240 560,720 415,720" fill="#E84E00"/>
+
+  <!-- Orange circle (person's head) -->
+  <circle cx="578" cy="340" r="62" fill="#E84E00"/>
+
+  <!-- White outer right arm going up to star -->
+  <polygon points="578,720 720,720 905,195 828,195" fill="#F5F0EB"/>
+
+  <!-- Peach inner shading -->
+  <polygon points="578,720 680,720 840,340 735,340" fill="#F5C5A3" opacity="0.80"/>
+
+  <!-- White 5-point Star at top-right -->
+  <polygon
+    points="857,105 876,162 935,162 888,197 907,254 857,220 807,254 826,197 779,162 838,162"
+    fill="#FFFFFF"
+  />
+</svg>
