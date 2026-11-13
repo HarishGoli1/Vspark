@@ -10,7 +10,7 @@ const courses = [
 
 const contactInfo = [
   { icon: Phone, label: 'Call Us', value: '+91 7997679469', href: 'tel:+917997679469', color: '#E84E00' },
-  { icon: Mail, label: 'WhatsApp', value: '7997679469', href: 'https://wa.me/917997679469', color: '#FF8C42' },
+  { icon: Mail, label: 'WhatsApp', value: '7997679469', href: `https://wa.me/917997679469?text=${encodeURIComponent("Hello VSpark Solutions, I visited your website and would like to know more about your programs and services. Please share the details.")}`, color: '#FF8C42' },
   { icon: MapPin, label: 'Visit Us', value: 'Ameerpet, Hyderabad, Telangana', href: '#', color: '#E84E00' },
 ]
 
@@ -83,6 +83,8 @@ export default function ContactForm() {
               <motion.a
                 key={label}
                 href={href}
+                target={href.startsWith('http') ? '_blank' : undefined}
+                rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}

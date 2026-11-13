@@ -24,14 +24,13 @@ const footerLinks = {
   Company: [
     { label: 'About Us', href: '#why' },
     { label: 'Testimonials', href: '#contact' },
-    { label: 'Job Openings', href: '#jobs' },
     { label: 'Contact', href: '#contact' },
   ],
 }
 
 const socials = [
-  { icon: Linkedin, href: 'https://www.linkedin.com/in/vspark-solutions-731b45420/', label: 'LinkedIn' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/company/vspark-solutions/', label: 'LinkedIn' },
+  { icon: Instagram, href: 'https://www.instagram.com/vsparksolutions/', label: 'Instagram' },
   { icon: Youtube, href: '#', label: 'YouTube' },
   { icon: Twitter, href: '#', label: 'Twitter' },
   { icon: Facebook, href: '#', label: 'Facebook' },
@@ -111,7 +110,7 @@ export default function Footer() {
                 +91 7997679469
               </a>
               <a
-                href="https://wa.me/917997679469"
+                href={`https://wa.me/917997679469?text=${encodeURIComponent("Hello VSpark Solutions, I visited your website and would like to know more about your programs and services. Please share the details.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-white/55 hover:text-orange transition-colors text-sm group"

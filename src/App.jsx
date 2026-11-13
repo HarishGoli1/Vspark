@@ -4,7 +4,6 @@ import Hero from './components/Hero'
 import TrustedBy from './components/TrustedBy'
 import TrainingPrograms from './components/TrainingPrograms'
 import PlacementServices from './components/PlacementServices'
-import JobOpenings from './components/JobOpenings'
 import WhyChoose from './components/WhyChoose'
 import PlacementTimeline from './components/PlacementTimeline'
 import StudentBenefits from './components/StudentBenefits'
@@ -35,7 +34,6 @@ function App() {
             <TrustedBy />
             <TrainingPrograms />
             <PlacementServices />
-            <JobOpenings />
             <WhyChoose />
             <PlacementTimeline />
             <StudentBenefits />

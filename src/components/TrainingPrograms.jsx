@@ -1,96 +1,108 @@
 import { motion } from 'framer-motion'
 import {
-  Code2, Database, BarChart3, Cloud, Settings, TestTube,
-  Megaphone, Palette, Clock, Users, TrendingUp, ArrowRight
+  Cloud, Code2, TestTube, Database, Brain, Network,
+  Coffee, Settings, Clock, Users, TrendingUp, ArrowRight
 } from 'lucide-react'
 
 const programs = [
   {
+    id: 'salesforce',
+    title: 'Salesforce',
+    icon: Cloud,
+    color: '#E84E00',
+    duration: 'Contact Us',
+    mode: 'Online / Offline',
+    skills: ['Admin', 'Development', 'Lightning', 'Integration'],
+    popular: true,
+  },
+  {
+    id: 'servicenow',
+    title: 'ServiceNow',
+    icon: Settings,
+    color: '#FF8C42',
+    duration: 'Contact Us',
+    mode: 'Online / Offline',
+    skills: ['ITSM', 'ITOM', 'CSM', 'Scripting'],
+    popular: true,
+  },
+  {
+    id: 'playwright',
+    title: 'Playwright Testing',
+    icon: TestTube,
+    color: '#E84E00',
+    duration: 'Contact Us',
+    mode: 'Online / Offline',
+    skills: ['Playwright', 'TypeScript', 'CI/CD', 'API Testing'],
+    popular: false,
+  },
+  {
+    id: 'selenium',
+    title: 'Selenium Testing',
+    icon: TestTube,
+    color: '#FF8C42',
+    duration: 'Contact Us',
+    mode: 'Online / Offline',
+    skills: ['Selenium', 'Java', 'TestNG', 'Cucumber'],
+    popular: false,
+  },
+  {
+    id: 'azure-data',
+    title: 'Azure Data Engineering',
+    icon: Database,
+    color: '#E84E00',
+    duration: 'Contact Us',
+    mode: 'Online / Offline',
+    skills: ['Azure', 'Data Factory', 'Databricks', 'SQL'],
+    popular: true,
+  },
+  {
+    id: 'sap',
+    title: 'SAP \u2013 All Modules',
+    icon: Coffee,
+    color: '#FF8C42',
+    duration: 'Contact Us',
+    mode: 'Online / Offline',
+    skills: ['SAP FICO', 'SAP MM', 'SAP SD', 'SAP ABAP'],
+    popular: false,
+  },
+  {
+    id: 'genai',
+    title: 'Generative AI',
+    icon: Brain,
+    color: '#E84E00',
+    duration: 'Contact Us',
+    mode: 'Online / Offline',
+    skills: ['LLMs', 'Prompt Engineering', 'LangChain', 'Python'],
+    popular: true,
+  },
+  {
+    id: 'networking',
+    title: 'Networking',
+    icon: Network,
+    color: '#FF8C42',
+    duration: 'Contact Us',
+    mode: 'Online / Offline',
+    skills: ['CCNA', 'TCP/IP', 'Firewall', 'Cloud Networking'],
+    popular: false,
+  },
+  {
     id: 'java',
-    title: 'Java Full Stack',
+    title: 'Java',
     icon: Code2,
     color: '#E84E00',
-    duration: '4 Months',
+    duration: 'Contact Us',
     mode: 'Online / Offline',
-    placement: '98%',
-    skills: ['Spring Boot', 'React', 'MySQL', 'AWS'],
-    popular: true,
+    skills: ['Core Java', 'Spring Boot', 'Hibernate', 'REST APIs'],
+    popular: false,
   },
   {
     id: 'python',
-    title: 'Python Full Stack',
+    title: 'Python',
     icon: Code2,
     color: '#FF8C42',
-    duration: '4 Months',
+    duration: 'Contact Us',
     mode: 'Online / Offline',
-    placement: '97%',
-    skills: ['Django', 'FastAPI', 'PostgreSQL', 'Docker'],
-    popular: false,
-  },
-  {
-    id: 'datascience',
-    title: 'Data Science',
-    icon: BarChart3,
-    color: '#E84E00',
-    duration: '5 Months',
-    mode: 'Online / Offline',
-    placement: '95%',
-    skills: ['Python', 'ML', 'TensorFlow', 'Power BI'],
-    popular: true,
-  },
-  {
-    id: 'aws',
-    title: 'AWS Cloud',
-    icon: Cloud,
-    color: '#FF8C42',
-    duration: '3 Months',
-    mode: 'Online / Offline',
-    placement: '96%',
-    skills: ['EC2', 'S3', 'Lambda', 'CloudFormation'],
-    popular: false,
-  },
-  {
-    id: 'devops',
-    title: 'DevOps',
-    icon: Settings,
-    color: '#E84E00',
-    duration: '3 Months',
-    mode: 'Online / Offline',
-    placement: '97%',
-    skills: ['Docker', 'Kubernetes', 'Jenkins', 'Git'],
-    popular: false,
-  },
-  {
-    id: 'testing',
-    title: 'Software Testing',
-    icon: TestTube,
-    color: '#FF8C42',
-    duration: '3 Months',
-    mode: 'Online / Offline',
-    placement: '95%',
-    skills: ['Selenium', 'Jest', 'Postman', 'JIRA'],
-    popular: false,
-  },
-  {
-    id: 'digitalmarketing',
-    title: 'Digital Marketing',
-    icon: Megaphone,
-    color: '#E84E00',
-    duration: '2 Months',
-    mode: 'Online / Offline',
-    placement: '93%',
-    skills: ['SEO', 'Google Ads', 'Meta Ads', 'Analytics'],
-    popular: false,
-  },
-  {
-    id: 'uiux',
-    title: 'UI/UX Design',
-    icon: Palette,
-    color: '#FF8C42',
-    duration: '3 Months',
-    mode: 'Online / Offline',
-    placement: '94%',
-    skills: ['Figma', 'Adobe XD', 'Prototyping', 'Research'],
+    skills: ['Core Python', 'Django', 'Flask', 'Automation'],
     popular: false,
   },
 ]
@@ -128,7 +140,7 @@ export default function TrainingPrograms() {
         </motion.div>
 
         {/* Cards Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {programs.map((program, i) => {
             const Icon = program.icon
             return (
@@ -180,24 +192,6 @@ export default function TrainingPrograms() {
                       {skill}
                     </span>
                   ))}
-                </div>
-
-                {/* Placement Rate */}
-                <div className="flex items-center justify-between mb-5">
-                  <span className="text-xs text-navy/50 font-medium">Placement Rate</span>
-                  <span className="text-sm font-bold" style={{ color: program.color }}>{program.placement}</span>
-                </div>
-
-                {/* Progress Bar */}
-                <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden mb-5">
-                  <motion.div
-                    className="h-full rounded-full"
-                    style={{ background: `linear-gradient(90deg, ${program.color}, ${program.color}99)` }}
-                    initial={{ width: 0 }}
-                    whileInView={{ width: program.placement }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: i * 0.1 + 0.5 }}
-                  />
                 </div>
 
                 {/* CTA */}

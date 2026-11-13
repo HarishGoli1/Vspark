@@ -6,7 +6,6 @@ const navLinks = [
   { label: 'Home', href: '#hero' },
   { label: 'Programs', href: '#programs' },
   { label: 'Placement', href: '#placement' },
-  { label: 'Jobs', href: '#jobs' },
   { label: 'Why VSPARK', href: '#why' },
   { label: 'Contact', href: '#contact' },
 ]
